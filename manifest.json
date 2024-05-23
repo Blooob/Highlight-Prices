@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Highlight Prices",
-  "version": "1.3",
+  "version": "1.4",
   "description": "Highlights prices with currency symbols",
   "permissions": [
     "activeTab",

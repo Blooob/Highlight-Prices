@@ -19,9 +19,13 @@ function highlightPrices() {
     const tempDiv = document.createElement('div');
     tempDiv.innerHTML = newText;
     while (tempDiv.firstChild) {
-      node.parentNode.insertBefore(tempDiv.firstChild, node);
+      if (node.parentNode) {
+        node.parentNode.insertBefore(tempDiv.firstChild, node);
+      }
     }
-    node.parentNode.removeChild(node);
+    if (node.parentNode) {
+      node.parentNode.removeChild(node);
+    }
   }
 
   // Function to walk through all text nodes
@@ -39,7 +43,6 @@ function highlightPrices() {
   // Start walking from the body element
   walkNodes(document.body, priceRegex);
 
-  console.log('Prices processed for highlighting.');
 }
 
 function highlightPricesCurrencyElement() {
@@ -63,9 +66,13 @@ function highlightPricesCurrencyElement() {
     const tempDiv = document.createElement('div');
     tempDiv.innerHTML = newText;
     while (tempDiv.firstChild) {
-      node.parentNode.insertBefore(tempDiv.firstChild, node);
+      if (node.parentNode) {
+        node.parentNode.insertBefore(tempDiv.firstChild, node);
+      }
     }
-    node.parentNode.removeChild(node);
+    if (node.parentNode) {
+      node.parentNode.removeChild(node);
+    }
   }
 
   // Function to walk through all text nodes
@@ -92,7 +99,6 @@ function highlightPricesCurrencyElement() {
   // Start walking from the body element
   walkNodes(document.body);
 
-  console.log('Prices processed for highlighting.');
 }
 
 // Ensure the function runs after the DOM is fully loaded
